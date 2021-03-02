@@ -1,2 +1,2 @@
-# Python-University-Work
- Rivet's Python university  work
+# Python-University-Works
+ Rivet's Python university  works
