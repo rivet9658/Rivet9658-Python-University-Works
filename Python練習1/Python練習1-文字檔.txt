@@ -1,0 +1,49 @@
+絤策1-ㄒ肈0:
+c=5
+fx=c*1.8+32
+print(fx)
+
+f=50
+cx=(f-32)/1.8
+print(cx)
+
+a = 'python'
+print("%5s"% (a)
+
+age=eval(input("please input a number:"))
+
+h,w=eval(input("please input your h and w :"))
+print("your bmi = ",w/(h*h))
+
+絤策1-ㄒ肈1:
+f=eval(input("块地ん放:"))
+c=(f-32)*(5/9)
+print("尼ん放:",c)
+
+絤策1-ㄒ肈2:
+r=eval(input("please input a number:"))
+import math
+s=2*r*math.sin(math.pi/5)
+area=((3*(3**0.5))/2)*s**2
+print(s)
+print(area)
+
+絤策1-ㄒ肈3:
+v=eval(input("块癬硉:"))
+a=eval(input("块硉:"))
+length=(v**2)/(2*a)
+print("程祏禲笵:",length)
+
+絤策1-ㄒ肈4:
+m=eval(input("块荐秖:"))
+initialT=eval(input("块癬﹍放:"))
+finalT=eval(input("块程沧放:"))
+q=m*(finalT-initialT)*4184
+print("┮惠秖:",q)
+
+絤策1-ㄒ肈5:
+r,h=eval(input("please input r and h = "))
+area=math.pi*(r**2)
+volume=area*h
+print("area=",area)
+print("volume=",volume)

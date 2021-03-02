@@ -1,0 +1,62 @@
+计娥:
+n = eval(input())
+for i in range(n+1,0,-1):
+    for j in range(n-i+1, 0,-1):
+        print('    ', end = ' ')
+    for a in range (i-1,0,-1):
+        print(a, end='    ')
+    for k in range(0, i-2,1):
+        print(k+2, end='    ')
+
+    print()
+
+ㄧΑ计材そ计:
+def main():
+    a=eval(input())
+    b=eval(input())
+    c=eval(input())
+    factor(a,b,c)
+    answer=factor(a,b,c)
+    print(answer)
+    
+def factor(x,y,z):
+    gcd=0
+    k=2
+    get=0
+    check=0
+    while k <= x and k <= y and k <= z:
+        if x % k ==0 and y % k ==0 and z % k ==0:
+                check=k
+        k=k+1
+    k=2
+    while k <= x and k <= y and k <= z:
+        if x % k ==0 and y % k ==0 and z % k ==0:
+            if k == check:
+                break
+            else:
+                gcd=k
+        k=k+1
+    return gcd
+main()
+
+ㄧΑ獶Ч计羆:
+def main():
+    c=eval(input())
+    d=eval(input())
+    c,d = min(c,d),max(c,d) 
+    prefect(c,d)
+    t=prefect(c,d)
+    print("羆㎝:",t)
+    
+def prefect(x,y):
+    total=0
+    for i in range(x,y+1):
+        s=0
+        for j in range(1,i):
+            if i%j==0:
+                s=s+j
+        if s!=i:
+            total=total+i
+    return total
+
+main()

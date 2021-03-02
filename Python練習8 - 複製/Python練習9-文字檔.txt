@@ -1,0 +1,47 @@
+絤策9-ㄒ肈1:
+outfile=open("friends.txt","w")
+for i in range(1,6):
+    data=input()
+    outfile.write(data)
+    outfile.write("\n")
+
+outfile.close()
+
+絤策9-ㄒ肈2:
+outfile=open("score.txt","w")
+while True:
+    name=input()
+    score=input()
+    if name=="none":
+        break
+    else:
+        outfile.write(name)
+        outfile.write("\n")
+        outfile.write(score)
+        outfile.write("\n")
+
+絤策9-ㄒ肈3:
+infile=open("friends.txt","r")
+for i in range(1,6):
+    info=infile.readline()
+    print(info)
+infile.close()
+
+絤策9-ㄒ肈4:
+infile=open("score.txt","r")
+while info!="":
+    info=infile.readline()
+    print(info)
+infile.close()
+
+絤策9-ㄒ肈5:
+infile=open("score.txt","r")
+c=1
+ad
+while info!="":
+    info=infile.readline()
+    if c%2==0:
+        ad=ad+int(c)
+ad=ad/(c/2)
+print(ad)
+infile.close()

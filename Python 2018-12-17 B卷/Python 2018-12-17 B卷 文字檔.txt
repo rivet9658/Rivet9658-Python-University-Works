@@ -1,0 +1,71 @@
+第一題:
+a=[]
+up=0
+c=0
+t=0
+while True:
+    j=eval(input())
+    if j!=-9999:
+        a.append(j)
+    else:
+        break
+
+for i in a:
+    up=up+i
+    c=c+1
+adv=up/c
+
+for k in a:
+    t=t+((k-adv)**2)
+t=t**0.5
+print(adv)
+print(t)
+
+第二題:
+ip1=eval(input())
+ip2=eval(input())
+ip1,ip2=min(ip1,ip2),max(ip1,ip2)
+answer=[]
+total=0
+for i in range(ip1,ip2+1):
+    s=0
+    for j in range(1,i):
+        if i%j==0:
+            s=s+j
+    if s==i:
+        answer.append(i)
+
+for k in answer:
+    print(k,end=" ")
+    total+=k
+print("\n")
+print(total)
+
+第三題:
+x=[]
+check=2
+a=0
+b=0
+ip1=eval(input())
+for i in range(0,ip1):
+    ip2=eval(input())
+    x.append(ip2)
+min1=min(x)
+le=len(x)
+x.sort()
+
+while check<=min1:
+    for k in x:
+        if k % check==0:
+            a+=1
+        else:
+            a=0
+    if a==le:
+        b=check
+    else:
+        a=0
+    check+=1
+if b!=0:
+    print("最大公因為:",b)
+else:
+    print(0)

@@ -1,0 +1,65 @@
+練習8-例題1:
+lst=[]
+while True:
+    str=input()
+    if str !="end":
+        lst=str.split(":")
+        print("hour:",lst[0],",min:",lst[1],",second:",lst[2])
+    else:
+        break
+
+練習8-例題2:
+string=input()
+l=len(string)
+s1=string[0]
+s2=string[1:l]
+if s1.isalpha()==True:
+    if s2.isalnum()==True:
+        print("合法變數名稱")
+    else:
+        print("不合法變數名稱")
+else:
+    print("不合法變數名稱")
+
+練習8-例題3:
+lst=[]
+for i in range(1,10):
+    str=input()
+    lst.append(str)
+
+for k in range(1,10):
+    if k%3 !=0:
+        print("|"+lst[k-1].ljust(15)+"|",end="")
+    else:
+        print("|"+lst[k-1].ljust(15)+"|")
+
+練習8-例題4:
+lst=[]
+while True:
+    s1=input()
+    if s1 !="end":
+        if s1.endswith("e")==True:
+            lst.append(s1)
+    else:
+        break
+print(lst)
+
+練習8-例題5:
+while True:
+    s1=input()
+    l=len(s1)
+    if l<20:
+        print("請重新輸入，請至少輸入20個字")
+    else:
+        for i in range(0,l):
+            if s1[i].isupper()==True:
+                print(s1[i],":is a upper alpha")
+            elif s1[i].islower()==True:
+                print(s1[i],":is a lower alpha")
+            elif s1[i].isdigit()==True:
+                print(s1[i],":is a number")
+            elif s1[i]==" ":
+                print(s1[i],":is a space")
+            else:
+                print(s1[i],":is other")
+        break

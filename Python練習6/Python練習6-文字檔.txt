@@ -1,0 +1,178 @@
+絤策6-ㄒ肈1:
+def show(mat,num_row,num_col):
+    for i in range(num_row):
+        for j in range(num_col):
+            print(mat[i][j],end=" ")
+        print()
+
+def main(mat1,mat2,ROWs,COLs):
+    print("Enter matrix 1:")
+    for i in range(ROWs):
+        mat1.append([])
+        for j in range(COLs):
+            print("[%d, %d]:"%(i+1,j+1),end="")
+            mat1[i].append(eval(input()))
+
+    print("Enter matrix 2:")
+    for i in range(ROWs):
+        mat2.append([])
+        for j in range(COLs):
+            print("[%d, %d]:"%(i+1,j+1),end="")
+            mat2[i].append(eval(input()))
+    return(mat1,mat2)
+
+def multiply(mat1,mat2,ROWs,COLs):
+    for i in range(ROWs):
+        for j in range(COLs):
+            print("%d"%(mat1[i][j]+mat2[i][j]),end=" ")
+        print()
+
+ROWs=COLs=2
+mat1=[]
+mat2=[]
+main(mat1,mat2,ROWs,COLs)
+print("Matrix1:")
+show(mat1,ROWs,COLs)
+print("Matrix2:")
+show(mat2,ROWs,COLs)
+print("Sum of 2 matrices:")
+multiply(mat1,mat2,ROWs,COLs)
+
+絤策6-ㄒ肈2:
+def show(mat,num_row,num_col):
+    for i in range(num_row):
+        for j in range(num_col):
+            print(mat[i][j],end=" ")
+        print()
+
+def main(mat1,mat2,ROWs,COLs):
+    print("Enter matrix 1:")
+    for i in range(ROWs):
+        mat1.append([])
+        for j in range(COLs):
+            print("[%d, %d]:"%(i+1,j+1),end="")
+            mat1[i].append(eval(input()))
+
+    print("Enter matrix 2:")
+    for i in range(ROWs):
+        mat2.append([])
+        for j in range(COLs):
+            print("[%d, %d]:"%(i+1,j+1),end="")
+            mat2[i].append(eval(input()))
+    return(mat1,mat2)
+
+def multiply(mat1,mat2,ROWs,COLs):
+    for i in range(ROWs):
+        for j in range(COLs):
+            print("%d"%(mat1[i][j]*mat2[i][j]),end=" ")
+        print()
+
+ROWs=COLs=2
+mat1=[]
+mat2=[]
+main(mat1,mat2,ROWs,COLs)
+print("Matrix1:")
+show(mat1,ROWs,COLs)
+print("Matrix2:")
+show(mat2,ROWs,COLs)
+print("Sum of 2 matrices:")
+multiply(mat1,mat2,ROWs,COLs)
+
+絤策6-ㄒ肈3:
+import random
+randlst=[]
+
+def main(randlst):
+    count=1
+    while count<=100:
+        randNum=random.randint(1,1000)
+        if randNum not in randlst:
+            randlst.append(randNum)
+            count+=1
+    return randlst
+
+def maxAndmin(randlst):
+    randlst.sort()
+    for j in range(1,101):
+        if j % 10 ==0:
+            print("%4d"%(randlst[j-1]))
+        else:
+            print("%4d"%(randlst[j-1]),end="")
+    print()
+    randlst.pop(99)
+    print(max(randlst))
+    randlst.reverse()
+    randlst.pop(98)
+    print(min(randlst))
+
+main(randlst)
+maxAndmin(randlst)
+
+絤策6-ㄒ肈4:
+alst=[]
+
+def main(alst):
+    for i in range(0,10):
+        alst.append(eval(input()))
+    print(alst)  
+    mm,ss=meanAndsd(alst)
+    print()
+    print(mm,ss)
+
+def meanAndsd(lst):
+    mean=0
+    sta=0
+    for j in range(0,10):
+        mean+=lst[j]
+    mean=mean/10
+    for k in range(0,10):
+        sta+=(lst[k]-mean)**2
+    sta=(sta/10)**0.5
+    return mean,sta
+
+main(alst)
+
+絤策6-ㄒ肈5:
+lst35=[]
+
+def main(lst35):
+    inputData(lst35)
+    total(lst35)
+
+def inputData(lst):
+    for i in range(0,3):
+        lst.append([])
+        print("#%d student"%(i+1))
+        for j in range(0,5):
+            score=eval(input())
+            lst[i].append(score)
+    return lst
+
+def total(lst2):
+    a=0
+    for i in range(0,3):
+        for j in range(0,5):
+            a+=lst2[i][j]
+        print("#%d student"%(i+1))
+        print("sum = ",a,", ","average = ",a/5)
+        a=0
+    
+main(lst35)
+
+絤策6-ㄒ肈6:
+aa=eval(input())
+bb=eval(input())
+def compute(a,b):
+    Armstrongnumbers=[]
+    for i in range(a,b+1):
+        s=0
+        n=len(str(i))
+        temp=i
+        while temp>0:
+            digit = temp % 10
+            s += digit ** n
+            temp //= 10
+        if i == s:
+            Armstrongnumbers.append(i)
+    print(Armstrongnumbers)
+compute(aa,bb)

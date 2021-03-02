@@ -1,0 +1,88 @@
+絤策4-ㄒ肈1:
+num = eval(input("put a number"))
+test=2
+while True:
+    if num%test==0:
+        print(test)
+        break
+    else:
+        test=test+1
+
+絤策4-ㄒ肈2:
+num1 = eval(input("put a number"))
+num2 = eval(input("put a number"))
+ans=[]
+test=2
+while True:
+    if num1&test==0 and num%test==0:
+        ans.append(test)
+        break
+    else:
+        test=test+1
+print(max(ans))
+
+絤策4-ㄒ肈3:
+num1 = eval(input("put a number"))
+num2 = eval(input("put a number"))
+num1,num2=min(num1,num2),max(num1,num2)
+test=2
+for i in range(num1,num2+1):
+    for j in range(test,i+1):
+        if i%j==0 and j!=i:
+            break
+        elif i%j ==0 and j==i:
+            print(i,end=" ")
+            break
+
+絤策4-ㄒ肈4:
+a=0
+b=0
+c=0
+invalid=0
+choice=0
+for i in range(0,11):
+    print("1:Peter")
+    print("2:Nancy")
+    print("3:Mary")
+    choice=eval(input("Which one do you prefer:"))
+    print("\n")
+    if choice == 1:
+        a=a+1
+    elif choice == 2:
+        b=b+1
+    elif choice == 3:
+        c=c+1
+    else:
+        invalid=invalid+1
+print("Peter:",a,"Nancy:",b,"Mary:",c)
+print("invalid:",invalid)
+
+絤策4-ㄒ肈5:
+a=0
+b=0
+c=0
+invalid=0
+choice=0
+for i in range(0,11):
+    print("1:Peter")
+    print("2:Nancy")
+    print("3:Mary")
+    choice=eval(input("Which one do you prefer:"))
+    if choice == 1:
+        a=a+1
+        print("Peter:",a,"Nancy:",b,"Mary:",c)
+        print("\n")
+    elif choice == 2:
+        b=b+1
+        print("Peter:",a,"Nancy:",b,"Mary:",c)
+        print("\n")
+    elif choice == 3:
+        c=c+1
+        print("Peter:",a,"Nancy:",b,"Mary:",c)
+        print("\n")
+    else:
+        invalid=invalid+1
+        print("Peter:",a,"Nancy:",b,"Mary:",c)
+        print("\n")
+print("Peter:",a,"Nancy:",b,"Mary:",c)
+print("invalid:",invalid)

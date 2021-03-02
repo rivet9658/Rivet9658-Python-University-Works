@@ -1,0 +1,77 @@
+絤策2-ㄒ肈0
+a,b,c=eval(input())
+import math
+lst1=[a,b,c]
+d=max(lst1)
+print(d)
+
+絤策2-ㄒ肈1
+a,b,c=eval(input('input 3 number='))
+d=(b**2)-(4*a*c)
+if d>0:
+ print('よ祘ΑΤ钵2秆')
+ answer1=(-b+((b**2)-(4*a*c))**0.5)/(2*a)
+ answer2=(-b-((b**2)-(4*a*c))**0.5)/(2*a)
+ print(answer1,answer2)
+elif d==0:
+ print('よ祘ΑΤ2秆')
+ answer1=(-b+((b**2)-(4*a*c))**0.5)/(2*a)
+ print(answer1)
+else:
+ print('よ祘Α礚秆')
+
+絤策2-ㄒ肈2
+x,y=eval(input('input 2 number='))
+answer=((x**2)+(y**2))**0.5
+if answer <=0:
+ print("inside of the circle")
+else:
+ print("outside of the circle")
+
+絤策2-ㄒ肈3
+import random
+a=random.randint(1,100)
+if a%3==0:
+    if a%5==0:
+        print(a,"琂琌3琌5计")
+    else:
+        print(a,"琌3计")
+elif a%5==0:
+    if a%3==0:
+        print(a,"琂琌3琌5计")
+    else:
+        print(a,"琌5计")
+else:
+    print(a,"ぃ琌3ぃ琌5计")
+
+絤策2-ㄒ肈4
+i=input("块16秈1~F计")
+if i=="A":
+    print(i,"せ秈琌10")
+elif i=="B":
+    print(i,"せ秈琌11")
+elif i=="C":
+    print(i,"せ秈琌12")
+elif i=="D":
+    print(i,"せ秈琌13")
+elif i=="E":
+    print(i,"せ秈琌14")
+elif i=="F":
+    print(i,"せ秈琌15")
+else:
+    print(i,"せ秈琌",i)
+
+絤策2-ㄒ肈5
+h=eval(input('input a number='))
+if h%5==0:
+    if h%8==0:
+      print(h,"can be diviended by 5 and 8")
+    else:
+      print(h,"can be diviended by 5")
+elif h%8==0:
+    if h%5==0:
+      print(h,"can be diviended by 5 and 8")
+    else:
+      print(h,"can be diviended by 8")
+else:
+ print(h,"can't be diviended by 5 or 8")

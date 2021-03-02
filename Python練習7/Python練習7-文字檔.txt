@@ -1,0 +1,112 @@
+絤策7-ㄒ肈1:
+import random
+number=[]
+for i in range(0,10):
+    number.append(random.randint(1,100))
+tuple1=tuple(number)
+print(number)
+print(tuple1)
+
+絤策7-ㄒ肈2:
+import random
+number=[]
+for i in range(0,10):
+    number.append(random.randint(1,100))
+set1=set(number)
+print(number)
+print(set1)
+
+絤策7-ㄒ肈3:
+def inputdata(setc):
+    while True:
+        a=eval(input())
+        if a!=-9999:
+            setc.add(a)
+        else:
+            break
+    return setc
+
+def operation(set11,set12):
+    print()
+    print("set1|set2=",set11|set12)
+    print("set1&set2=",set11&set12)
+    print("set1-set2=",set11-set12)
+    print("set1^set2=",set11^set12)
+    print("set1 is a subset of set2:",set11.issubset(set12))
+    print("set1 is a superset of set2:",set11.issuperset(set12))
+    
+def main():
+    print("input set1 data:")
+    set1=set()
+    inputdata(set1)
+    
+    print("input set2 data:")
+    set2=set()
+    inputdata(set2)
+    
+    print("set1:",set1)
+    print("set2:",set2)
+    operation(set1,set2)
+    
+main()
+
+絤策7-ㄒ肈4:
+dict10={}
+
+while True:
+    print("input key:",end="")
+    k=eval(input())
+    print("input value:",end="")
+    v=eval("input()")
+    if k !=-9999:
+        dict10[k]=v
+    else:
+        break
+        
+print(dict10)
+print("what key do you wnat to delete:",end='')
+found=eval(input())
+
+if found in dict10:
+    del dict10[found]
+    print(dict10)
+else:
+    print("not found")
+
+絤策7-ㄒ肈5:
+dict10={}
+while True:
+    print("1:add")
+    print("2:delete")
+    print("3:query")
+    print("4:display")
+    print("5:exit")
+    print("Which one:",end="")
+    ch=eval(input())
+    if ch ==1:
+        print("input key:",end="")
+        k=eval(input())
+        print("input value:",end="")
+        v=eval("input()")
+        dict10[k]=v
+    elif ch==2:
+        print("input key:",end="")
+        delete=eval(input())
+        if delete in dict10:
+            del dict10[delete]
+            print(delete,"has been delete")
+        else:
+            print("not found the key")
+    elif ch==3:
+        print("input key:",end="")
+        found=eval(input())
+        if found in dict10:
+            print(dict10[found])
+        else:
+            print("not found the key")
+    elif ch==4:
+        print(dict10)
+    elif ch==5:
+        break
+    else:
+        print("it is a error number")

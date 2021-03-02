@@ -1,0 +1,92 @@
+第一題 階梯排列(右上到左下,大到小)
+c=eval(input("輸入一個<20的正整數:"))
+h=0
+if c>20 or c<=-1:
+    print(c,"非範圍值，請重新輸入")
+else:
+    for k in range(0,c+1):
+        for j in range(k,0,-1):
+            while h<c-k:
+                print("    ",end="")
+                h=h+1
+            print("%4d" % (j),end="")
+            if j==1:
+                print("\n")
+                h=0
+
+第二題 三數最小公倍數
+u=eval(input("put a number:"))
+x=eval(input("put a number:"))
+h=eval(input("put a number:"))
+great=0
+lcm=0
+if u>x and u>h:
+    great=u
+elif x>u and x>h:
+    great=x
+else:
+    great=h
+while(True):
+    if((great % u == 0) and (great % x == 0) and (great % h == 0)):
+        lcm = great
+        break
+    great = great + 1
+print(u,"和",x,"和",h,"的最小公倍數是",great)
+
+第三題 非質數加總
+i=eval(input("put a number:"))
+e=eval(input("put a number:"))
+i,e = min(i,e),max(i,e) 
+clk=0
+total=0
+print(i,"到",e,"的非質數有:",end="")
+for k in  range(i,e+1):
+    if clk==0 and i==1:
+        print("1",end=" ")
+        clk=clk+1
+        total=total+1
+    else:
+        for x in range(2,k+1):
+            if k%x ==0 and x!=k:
+                print(k,end=" ")
+                total=total+k
+                break
+            elif k%x ==0 and x==k:
+                break
+print("\n總合為:",total)
+
+
+考試:
+n = eval(input())
+for i in range(0, n+1):
+    for j in range(n-i, 1,-1):
+        print('    ', end = ' ')
+    for a in range (i,0,-1):
+        print(a, end='    ')
+    for k in range(0, i-1,1):
+        print(k+2, end='    ')
+
+    print()
+
+
+
+def main():
+    c=eval(input())
+    d=eval(input())
+    c,d = min(c,d),max(c,d) 
+    prefect(c,d)
+    t=prefect(c,d)
+    print("總和為:",t)
+    
+def prefect(x,y):
+    total=0
+    for i in range(x,y+1):
+        s=0
+        for j in range(1,i):
+            if i%j==0:
+                s=s+j
+        if s!=i:
+            total=total+i
+    return total
+
+main()
